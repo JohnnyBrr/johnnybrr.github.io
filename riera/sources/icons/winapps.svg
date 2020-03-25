@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #03232e;
+      }
+
+      .cls-2 {
+        fill: #07485e;
+      }
+
+      .cls-3 {
+        fill: #87a0af;
+      }
+
+      .cls-4 {
+        fill: #b4d2d7;
+      }
+
+      .cls-5 {
+        fill: #e1ebf0;
+      }
+
+      .cls-6 {
+        fill: #32afff;
+      }
+
+      .cls-7 {
+        fill: #3abcef;
+      }
+
+      .cls-8 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <title>Asset 6</title>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Layer_1-2" data-name="Layer 1">
+      <g>
+        <path class="cls-1" d="M120,8.31H60L55.31,78,120,73.29Z"/>
+        <path class="cls-2" d="M0,8.31v65L60,78V8.31Z"/>
+        <path class="cls-3" d="M79.93,108.17v-15L55.31,88.53,60,108.17Z"/>
+        <path class="cls-4" d="M40.07,108.17H60V88.53L40.07,93.22Z"/>
+        <path class="cls-4" d="M91.15,111.69v-7H60l-2.35,3.51L60,111.69Z"/>
+        <path class="cls-5" d="M28.85,104.66H60v7H28.85Z"/>
+        <path class="cls-4" d="M60,73.29l-4.69,10,4.69,10h60V73.29Z"/>
+        <path class="cls-5" d="M0,73.29H60V93.22H0Z"/>
+        <path class="cls-6" d="M61,42.31H73v12H61Z"/>
+        <path class="cls-6" d="M61,28.31H73v12H61Z"/>
+        <path class="cls-7" d="M47,42.31H59v12H47Z"/>
+        <path class="cls-7" d="M47,28.31H59v12H47Z"/>
+      </g>
+      <rect class="cls-8" width="120" height="120"/>
+    </g>
+  </g>
+</svg>

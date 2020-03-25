@@ -1,0 +1,113 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    position: relative;
+    overflow-x: hidden;
+    width: 100%;
+    background-color: $rieraWhite;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    z-index: 1;
+    background: rgb(253,253,253);
+    background: linear-gradient(180deg, 
+                rgba(253,253,253,0.8) 0%, 
+                rgba(253,253,253,0.6) 45%, 
+                rgba(253,253,253,0.1) 85%, 
+                rgba(253,253,253,0) 100%);
+
+    nav {
+        width: 100%;
+        height: 100%;
+
+        .menuContainer {
+            width: 100%;
+            height: 100%;
+            padding: 0 40px;
+    
+            .menu {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                height: 60px;
+                margin: 20px 0px;
+                
+                .sections {
+
+                    ul {
+                        display: flex;
+                        justify-content: space-between;
+
+                        li {
+                            font-family: $synco;
+                            font-weight: bold;
+                            margin: 0 15px;
+                            transition: $link-tr;
+                        }
+                        li:hover {
+                            color: $rieraRed;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+    .navLogo {
+        width: auto;
+        height: 60px;
+    }
+}
+
+footer {
+    background-color: $rieraBlack;
+    width: 100%;
+    height: 25vh;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    img {
+        width: auto;
+        height: 80px;
+    }
+    span {
+        font-family: $jaldi;
+        font-weight: bold;
+        font-style: $regular-p;
+        letter-spacing: 0.01em;
+        color: white;
+    }
+    .topButton {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        
+        span {
+            font-family: $synco;
+            font-weight: normal;
+            font-size: $sub-h2;
+            color: $rieraWhite;
+            text-align: center;
+            padding: 0 20px;
+        }
+        .arrowUp {
+            min-width: 70px;
+            height: 70px;
+            border-radius: 100%;
+            background-color: $rieraRed;
+            cursor: pointer;
+            transform: rotate(90deg);
+        }
+    }
+}

@@ -1,0 +1,33 @@
+.landingSection {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+
+    .background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 1110px;
+        z-index: -1;
+    }
+    &__title {
+        width: 90%;
+        margin: 20% auto 0 auto;
+        text-align: center;
+
+        h1 {
+            font-family: $synco;
+            font-weight: bold;
+            font-size: $h1;
+            color: $rieraWhite;
+        }
+        p {
+            font-family: $jaldi;
+            font-weight: normal;
+            font-size: $large-p;
+            color: $rieraWhite;
+            margin-top: 20px;
+        }
+    }
+}
