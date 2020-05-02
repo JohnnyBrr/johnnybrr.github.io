@@ -15,6 +15,7 @@
             font-family: $synco;
             font-weight: bold;
             font-size: $h2;
+            white-space: nowrap;
         }
         div {
             display: flex;
@@ -42,6 +43,48 @@
             button:hover {
                 color: $rieraBlack;
                 text-shadow: 1px 1px 0px $rieraWhite;
+            }
+        }
+        .glide__arrows {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 60%;
+            margin: 35px auto;
+        }
+        .glide__arrow {
+            min-width: 70px;
+            height: 70px;
+            border-radius: 100%;
+            background-color: $rieraRed;
+            cursor: pointer;
+            margin: 0 10px;
+
+            svg {
+                height: 70px;
+            }
+            &--left {
+                -webkit-box-shadow: -3px 3px 5px 0px rgba(0,0,0,0.25);
+                -moz-box-shadow: -3px 3px 5px 0px rgba(0,0,0,0.25);
+                box-shadow: -3px 3px 5px 0px rgba(0,0,0,0.25);
+            }
+            .left_cls-2 {
+                transition: $link-tr;
+            }
+            &--left:hover .left_cls-2 {
+                fill: rgba($rieraBlack , .75);
+            }
+            &--right {
+                transform: rotate(180deg);
+                -webkit-box-shadow: -3px -3px 5px 0px rgba(0,0,0,0.25);
+                -moz-box-shadow: -3px -3px 5px 0px rgba(0,0,0,0.25);
+                box-shadow: -3px -3px 5px 0px rgba(0,0,0,0.25);
+            }
+            .right_cls-2 {
+                transition: $link-tr;
+            }
+            &--right:hover .right_cls-2 {
+                fill: rgba($rieraBlack , .75);
             }
         }
     }
@@ -111,53 +154,6 @@
             }
             .techCol {
                 background-color: $rieraBlack;
-            }
-        }
-        &__arrows {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 60%;
-            margin: 35px auto;
-
-            span {
-                font-family: $synco;
-                font-weight: 200;
-                font-size: $sub-h2;
-                color: $rieraRed;
-                text-align: center;
-                padding: 0 20px;
-            }
-        }
-        &__arrow {
-            min-width: 70px;
-            height: 70px;
-            border-radius: 100%;
-            background-color: $rieraRed;
-            cursor: pointer;
-
-            &--left {
-                -webkit-box-shadow: -3px 3px 5px 0px rgba(0,0,0,0.25);
-                -moz-box-shadow: -3px 3px 5px 0px rgba(0,0,0,0.25);
-                box-shadow: -3px 3px 5px 0px rgba(0,0,0,0.25);
-            }
-            .left_cls-2 {
-                transition: $link-tr;
-            }
-            &--left:hover .left_cls-2 {
-                fill: rgba($rieraBlack , .75);
-            }
-            &--right {
-                transform: rotate(180deg);
-                -webkit-box-shadow: -3px -3px 5px 0px rgba(0,0,0,0.25);
-                -moz-box-shadow: -3px -3px 5px 0px rgba(0,0,0,0.25);
-                box-shadow: -3px -3px 5px 0px rgba(0,0,0,0.25);
-            }
-            .right_cls-2 {
-                transition: $link-tr;
-            }
-            &--right:hover .right_cls-2 {
-                fill: rgba($rieraBlack , .75);
             }
         }
     }
