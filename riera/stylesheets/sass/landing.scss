@@ -1,3 +1,7 @@
+@keyframes titleIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
 .landingSection {
     position: relative;
     overflow: hidden;
@@ -6,27 +10,36 @@
 
     .background {
         position: absolute;
-        top: 0;
-        left: 0;
-        height: 1110px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        height: 500px;
         z-index: -1;
     }
     &__title {
         width: 90%;
-        margin: 20% auto 0 auto;
+        margin: 350px auto 0 auto;
         text-align: center;
+        opacity: 0;
+        animation-name: titleIn;
+        animation-duration: 0.5s;
+        animation-delay: 7s;
+        animation-iteration-count: 1;
+        animation-direction: normal;
+        animation-timing-function: ease-in;
+        animation-fill-mode: forwards;
 
         h1 {
             font-family: $synco;
             font-weight: bold;
             font-size: $h1;
-            color: $rieraWhite;
+            color: $rieraBlack;
         }
         p {
             font-family: $jaldi;
             font-weight: normal;
             font-size: $large-p;
-            color: $rieraWhite;
+            color: $rieraBlack;
             margin-top: 20px;
         }
     }
