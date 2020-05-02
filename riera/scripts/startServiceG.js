@@ -1,5 +1,6 @@
 var serviceG = new Glide('.serviceGlide', {
         type: 'carousel',
+        autoplay: 3000,
         gap: 20,
         startAt: 0,
         perView: 4,
