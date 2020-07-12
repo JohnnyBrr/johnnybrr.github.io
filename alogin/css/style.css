@@ -162,11 +162,11 @@ canvas{
  color: #000;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 480px) {
   #container {
-    width: 250px;
+    width: 280px;
     height: 280px;
-    padding: 0 15px;
+    padding: 0 30px;
     border-radius: 20px 20px 0 0;
   }
   #container form label {
