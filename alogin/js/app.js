@@ -23,13 +23,13 @@ particlesJS('particles-js',
         }
       },
       "color": {
-        "value": "#000000"
+        "value": "#0F4C81"
       },
       "shape": {
         "type": "polygon",
         "stroke": {
           "width": 0,
-          "color": "#000000"
+          "color": "#0F4C81"
         },
         "polygon": {
           "nb_sides": 4
@@ -123,3 +123,29 @@ particlesJS('particles-js',
   }
 
 );
+
+
+
+// -_-_-_-_-_-Johnny B's js-_-_-_-_-_-
+
+function eye() {
+  var t = document.getElementById("pword").value;
+  var e = document.getElementById("pwdEye");
+  if (t === "") {
+    e.style.display = "none";
+  } else {
+    e.style.display = "block";
+  }
+}
+
+function showHide() {
+  var pwd = document.getElementById("pword");
+  var eye = document.getElementById("pwdEye");
+  if (pwd.type === "password") {
+    pwd.type = "text";
+    eye.style.backgroundImage = "url(img/eye-c.png)";
+  } else {
+    pwd.type = "password";
+    eye.style.backgroundImage = "url(img/eye-o.png)";
+  }
+}

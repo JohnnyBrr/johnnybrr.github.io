@@ -11,15 +11,20 @@
 
 <!-- particles.js container -->
 <div id="particles-js"></div>
+
+<!-- login form container -->
 <div id="container">
     <img src="img/logo.png" alt="logo Artel login section">
     <form action="">
-        <label for="user">Nome Utente</label>
-        <input name="user" type="text" placeholder="Username" required>
-        <label for="pword">Password</label>
-        <input name="pword" type="password" placeholder="Password" required>
+        <label for="user">USERNAME</label>
+        <input name="user" type="text" placeholder="inserire username">
+        <label for="pword">PASSWORD</label>
+        <div id="pwCont">
+          <input id="pword" name="pword" type="password" placeholder="inserire password" oninput="eye()" required>
+          <div id="pwdEye" onclick="showHide()"></div>
+        </div>
         <a href="#">Password dimenticata?</a>
-        <input id="submit" type="submit" value="Login">
+        <input id="submit" type="submit" value="LOGIN">
     </form>
 </div>
 
