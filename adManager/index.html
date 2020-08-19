@@ -1,105 +1,63 @@
-<!DOCTYPE html>
+<!doctype html>
 
-<html>
+<html lang="it">
 
     <head>
+        <meta charset="utf-8">
 
-    <title>Ad Manager</title>
-    <meta charset="UTF-8">
+        <title>ADV Manager Login</title>
+        <meta name="description" content="ADV Manager per l'azienda Matteotti.">
+        <meta name="author" content="Artel">
 
-    <link rel="stylesheet" type="text/css" href="style/style.min.css">
+        <link rel="stylesheet" href="styles/kendo.common.min.css">
+        <link rel="stylesheet" href="styles/style.min.css">
 
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script type="text/javascript" src="js/lib/Scrollify/jquery.scrollify.js"></script>
-
+        <script src="js/lib/jQuery/jquery-3.5.1.min.js"></script>
+        <script src="js/lib/kendo/kendo.all.min.js"></script>
     </head>
 
     <body>
+        <section class="loginContainer">
+            <div class="loginContainer__bkg"></div>
+            <div class="loginContainer__overlay"></div>
 
-        <aside class="toolbar">
-            <div class="toolbar__buttons">
-                <button>test</button>
-                <button>test</button>
-                <button>test</button>
+            <div class="loginContainer__sidebar">
+                <p>A R E A&nbsp;&nbsp;&nbsp;R I S E R V A T A</p>
+                <h1>PAMBIANCO NEWS ADV MANAGER</h1>
+                <div id="loginForm"></div>
             </div>
-            <div>
-                <label class="monthLabel" for="monthsMenu">Mese:</label>
-                <select id="monthsMenu" name="months">
-                    <option value="gen">Gennaio</option>
-                    <option value="feb">Febbraio</option>
-                    <option value="mar">Marzo</option>
-                    <option value="apr">Aprile</option>
-                    <option value="may">Maggio</option>
-                    <option value="jun">Giugno</option>
-                    <option value="jul">Luglio</option>
-                    <option value="aug">Agosto</option>
-                    <option value="sep">Settembre</option>
-                    <option value="oct">Ottobre</option>
-                    <option value="nov">Novembre</option>
-                    <option value="dec">Dicembre</option>
-                </select>
-                <input type="button" onclick="fun()" value="Vai">
-            </div>
-        </aside>
+        </section>
 
-        <div class="bigScroll">
-            <div class="bigScroll__jan pamScroll" data-section-name="gen">
-                <div class="slideBkg"></div>
-                <div class="title">Gennaio</div>
-            </div>
-            <div class="bigScroll__feb pamScroll" data-section-name="feb">
-                <div class="slideBkg"></div>
-                <div class="title">Febbraio</div>
-            </div>
-            <div class="bigScroll__mar pamScroll" data-section-name="mar">
-                <div class="slideBkg"></div>
-                <div class="title">Marzo</div>
-            </div>
-            <div class="bigScroll__apr pamScroll" data-section-name="apr">
-                <div class="slideBkg"></div>
-                <div class="title">Aprile</div>
-            </div>
-            <div class="bigScroll__may pamScroll" data-section-name="may">
-                <div class="slideBkg"></div>
-                <div class="title">Maggio</div>
-            </div>
-            <div class="bigScroll__jun pamScroll" data-section-name="jun">
-                <div class="slideBkg"></div>
-                <div class="title">Giugno</div>
-            </div>
-            <div class="bigScroll__jul pamScroll" data-section-name="jul">
-                <div class="slideBkg"></div>
-                <div class="title">Luglio</div>
-            </div>
-            <div class="bigScroll__aug pamScroll" data-section-name="aug">
-                <div class="slideBkg"></div>
-                <div class="title">Agosto</div>
-            </div>
-            <div class="bigScroll__sep pamScroll" data-section-name="sep">
-                <div class="slideBkg"></div>
-                <div class="title">Settembre</div>
-            </div>
-            <div class="bigScroll__oct pamScroll" data-section-name="oct">
-                <div class="slideBkg"></div>
-                <div class="title">Ottobre</div>
-            </div>
-            <div class="bigScroll__nov pamScroll" data-section-name="nov">
-                <div class="slideBkg"></div>
-                <div class="title">Novembre</div>
-            </div>
-            <div class="bigScroll__dec pamScroll" data-section-name="dec">
-                <div class="slideBkg"></div>
-                <div class="title">Dicembre</div>
-            </div>
-        </div>
-
-        <aside class="bottomBar">
-            <button>Rivista</button>
-            <button>Newsletter</button>
-            <button>Sito</button>
-        </aside>
-
-        <script type="text/javascript" src="js/scripts/monthsNav.js"></script>
+        <script>
+            $(document).ready(function () {
+                $("#loginForm").kendoForm({
+                    validatable: {
+                        errorTemplate: "<span><div>elemento errato</div></span>"
+                    },
+                    orientation: "vertical",
+                    formData: {
+                        Username: "",
+                        Password: ""
+                    },
+                    items: [
+                        {
+                            field: "Username",
+                            label: "Username",
+                            validation: { required: true }
+                        },
+                        {
+                            field: "Password",
+                            label: "Password",
+                            validation: { required: true }
+                        }
+                    ]
+                });
+                $(".k-form-submit").html("ACCESSO");
+                $("#Username").attr("placeholder", "inserire username");
+                $("#Password").attr("type", "password");
+                $("#Password").attr("placeholder", "inserire password");
+            });
+        </script>
 
     </body>
 

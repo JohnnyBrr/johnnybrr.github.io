@@ -1,0 +1,152 @@
+.loginContainer {
+    position: relative;
+    width: 100%;
+    min-height: 900px;
+    height: 100vh;
+
+    &__bkg {
+        position: absolute;
+        top: 0; right: 0;
+        width: 75%;
+        height: 100%;
+        background-image: url("../img/login/background_img.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        z-index: -1;
+    }
+    &__overlay {
+        position: absolute;
+        top: 0; right: 0;
+        width: 75%;
+        height: 100%;
+        background-color: $pamr;
+        mix-blend-mode: hue;
+        z-index: -1;
+    }
+    &__sidebar {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-width: 450px;
+        width: 30%;
+        height: 100%;
+        background-color: $pamr;
+        border-radius: 0 20px 20px 0;
+        padding: 125px 75px 0 0;
+
+        p {
+            width: 100%;
+            font-family: $rob;
+            font-weight: $medium;
+            font-size: 14px;
+            line-height: 40px;
+            text-align: right;
+            color: $pamw;
+            border-bottom: solid 1px $pamw;
+        }
+        h1 {
+            width: 270px;
+            font-family: $rob;
+            font-weight: $light;
+            font-size: 30px;
+            letter-spacing: 0.025em;
+            color: $pamw;
+            margin-top: 30px;
+            align-self: flex-end;
+        }
+        #loginForm {
+            position: absolute;
+            top: 63%; left: 50%;
+            transform: translate(-50%,-50%);
+            width: 300px;
+
+            .k-form-field {
+                font-family: $rob;
+                margin-bottom: 20px;
+                
+                label {
+                    position: relative;
+                    font-size: 12px;
+                    letter-spacing: 0.05em;
+                    color: $pamw;
+                    padding-left: 10px;
+                }
+                input {
+                    font-size: 14px;
+                    height: 40px;
+                    border: none;
+                    border-radius: 3px;
+                    padding-left: 40px;
+                    padding-right: 12px;
+                    margin-bottom: 5px;
+                }
+                .k-invalid-msg {
+                    font-size: 10px;
+                    color: $pamw;
+                    letter-spacing: 0.05em;
+                    text-transform: uppercase;
+                    
+                    div {
+                        width: 100%;
+                        text-align: right;
+                    }
+                }
+            }
+            .k-form-buttons {
+                margin-top: 150px;
+                
+                .k-form-submit {
+                    width: 100%;
+                    height: 40px;
+                    background: transparent;
+                    border: solid 1px $pamw;
+                    border-radius: 3px;
+                    font-family: $rob;
+                    font-weight: $medium;
+                    font-size: 14px;
+                    letter-spacing: 0.125em;
+                    line-height: 40px;
+                    color: $pamw;
+                    transition: .2s ease-in;
+                }
+                .k-form-submit:hover {
+                    background: $pamw;
+                    color: $pamr;
+                }
+                .k-form-clear {
+                    display: none !important;
+                }
+            }
+
+        }
+    }
+}
+#Username-form-label::before {
+    display: block;
+    z-index: 999;
+    content: "";
+    position: absolute;
+    top: 28px; left: 10px;
+    width: 24px;
+    height: 24px;
+    background-image: url(../img/login/user_icon.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: .87;
+}
+#Password-form-label::before {
+    display: block;
+    z-index: 999;
+    content: "";
+    position: absolute;
+    top: 28px; left: 10px;
+    width: 24px;
+    height: 24px;
+    background-image: url(../img/login/pwd_icon.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: .87;
+}
