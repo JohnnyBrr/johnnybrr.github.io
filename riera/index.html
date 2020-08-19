@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    
+    <meta charset="utf-8" />
+
+    <title>Riera s.r.l.</title>
+
+    <link rel="icon" href="sources/rierasrl.ico">
+
+    <meta name="description"
+        content="Più di venti anni di esperienza per offrivi soluzioni veloci, semplici e su misura per piccole e medie aziende" />
+    <meta name="author" content="Riera s.r.l." />
+
+    <link rel="stylesheet" href="stylesheets/style.min.css" />
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
+    
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="menuContainer">
+                <ul class="menu">
+                    <li class="menuLogo">
+                        <a href="" onclick="location.reload()">
+                            <img class="navLogo" src="sources/img/navLogo.png" />
+                        </a>
+                    </li>
+                    <li class="sections">
+                        <ul>
+                            <li class="services">
+                                <a href="#services">
+                                    <span>servizi</span>
+                                </a>
+                            </li>
+                            <li class="about">
+                                <a href="#about">
+                                    <span>su di noi</span>
+                                </a>
+                            </li>
+                            <li class="team">
+                                <a href="#team">
+                                    <span>la squadra</span>
+                                </a>
+                            </li>
+                            <li class="showcase">
+                                <a href="#showcase">
+                                    <span>showcase</span>
+                                </a>
+                            </li>
+                            <li class="contacts">
+                                <a href="#contacts">
+                                    <span>contatti</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="landingSection">
+        <video class="background" autoplay muted>
+            <source src="sources/video/riera-animation.webm" type="video/webm">
+            <source src="sources/video/riera-animation.mp4" type="video/mp4">
+        </video>
+        <div class="landingSection__title">
+            <h1>non solo informatica, ma vere emozioni</h1>
+            <p>Più di venti anni di esperienza per offrirvi soluzioni veloci, semplici e su misura per le piccole e medie aziende</p>
+        </div>
+    </section>
+
+    <section id="services" class="serviceSection">
+        <div class="serviceGlide">
+            <div class="sectionTitle">
+                <h2>i nostri servizi</h2>
+                <div class="glide__arrows" data-glide-el="controls">
+                    <div class="glide__arrow glide__arrow--left" data-glide-dir="<" onclick="arrowsReset()">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70 70">
+                            <defs>
+                                <style>
+                                    .left_cls-1 {
+                                        fill: none;
+                                        position: absolute;
+                                    }
+                                    .left_cls-2 {
+                                        fill: #fdfdfd;
+                                    }
+                                </style>
+                            </defs>
+                            <title>left arrow</title>
+                            <g id="Layer_1-2" data-name="Layer 1">
+                                <rect class="left_cls-1" width="70" height="70"/>
+                                <path class="left_cls-2" d="M23.94,36.55,41.66,54.28a2.2,2.2,0,0,0,3.08,0L46.05,53a2.2,2.2,0,0,0,0-3.08L31.16,35l14.9-14.9a2.17,2.17,0,0,0,0-3.08l-1.3-1.31a2.2,2.2,0,0,0-3.08,0L23.94,33.46a2.2,2.2,0,0,0,0,3.1Z"/>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="glide__arrow glide__arrow--right" data-glide-dir=">" onclick="arrowsReset()">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70 70">
+                            <defs>
+                                <style>
+                                    .right_cls-1 {
+                                        fill: none;
+                                    }
+                                
+                                    .right_cls-2 {
+                                        fill: #fdfdfd;
+                                    }
+                                </style>
+                            </defs>
+                            <title>right arrow</title>
+                            <g id="Layer_1-2" data-name="Layer 1">
+                                <rect class="right_cls-1" width="70" height="70"/>
+                                <path class="right_cls-2" d="M23.94,36.55,41.66,54.28a2.2,2.2,0,0,0,3.08,0L46.05,53a2.2,2.2,0,0,0,0-3.08L31.16,35l14.9-14.9a2.17,2.17,0,0,0,0-3.08l-1.3-1.31a2.2,2.2,0,0,0-3.08,0L23.94,33.46a2.2,2.2,0,0,0,0,3.1Z"/>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+                <div data-glide-el="controls">
+                    <button data-glide-dir="=3" class="artButt" onclick="artFilter()">arte</button>
+                    <button data-glide-dir="=0" class="appsButt" onclick="appsFilter()">apps</button>
+                    <button data-glide-dir="=2" class="techButt" onclick="techFilter()">tecnico</button>
+                </div>
+            </div>
+            <div data-glide-el="track" class="glide__track">
+              <ul class="glide__slides">
+                <li class="glide__slide apps">
+                    <div class="appsCol">
+                        <img src="sources/icons/database.svg" alt="database managing icon">
+                        <h6>gestione database</h6>
+                        <p>Un servizio qualificato ed esperto di disegno, implementazione e amministrazione di progetti di database, che include svariate piattaforme, softwares di gestione e filosofie di utilizzo. Proponiamo gestione di base dati sia locali (on-premise) che piattaforme online (cloud), consigliando sempre il modo più efficiente di immagazzinare e analizzare i propri dati.</p>
+                    </div>
+                </li>
+                <li class="glide__slide apps">
+                    <div class="appsCol">
+                        <img src="sources/icons/winapps.svg" alt="windows apps icon">
+                        <h6>app windows</h6>
+                        <p>Non offriamo solo programmi che risolvano quesiti o esigenze determinate, ma un servizio completo che va dalla comprensione delle vostre richieste, alla generazione di una interfaccia accattivante e creativa che migliori la vostra esperienza di utilizzo del computer e renda piacevole e intuitivo il percorso per arrivare ai risultati desiderati.</p>
+                    </div>
+                </li>
+                <li class="glide__slide tech">
+                    <div class="techCol">
+                        <img src="sources/icons/webapi.svg" alt="web api icon">
+                        <h6>web api</h6>
+                        <p>Vi offriamo l’esperienza nella creazione di interfacce web per programmi che permettano a diversi applicativi di comunicare con le vostre base dati creando un sistema integrato per lo scambio di informazioni tra i diversi applicativi aziendali.</p>
+                    </div>
+                </li>
+                <li class="glide__slide art">
+                    <div class="artCol">
+                        <img src="sources/icons/digitaldocs.svg" alt="digital documents icon">
+                        <h6>documenti digitali e traduzioni</h6>
+                        <p>Vi offriamo servizi di traduzione di documenti di varia natura dallo spagnolo, l’inglese, il tedesco e l’italiano aggiungendo il servizio di valutazione della loro conservazione digitale e degli elementi richiesti per la loro smaterializzazione con l’utilizzo di sistemi informatici.</p>
+                    </div>
+                </li>
+                <li class="glide__slide art">
+                    <div class="artCol">
+                        <img src="sources/icons/digitalart.svg" alt="digital art icon">
+                        <h6>arte digitale</h6>
+                        <p>Vi offriamo la gestione ai fine della valorizzazione, fruizione e/o divulgazione dei beni cultural propedeutici alla loro conservazione con strumenti informatici o digitali, alla divulgazione, attraverso strumenti digitali, di argomenti storici, archeologici ed artistici presso siti informatici o piattaforme digitali dedicate al patrimonio culturale.</p>
+                    </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+    </section>
+
+    <section id="about" class="aboutSection">
+        <div class="sectionTitle">
+            <h2>su di noi</h2>
+        </div>
+        <div class="textContainer">
+            <div class="leftCol">
+                <p>La nostra squadra si fonda sulla <strong>combinazione</strong> della grande competenza dei nostri collaboratori più navigati, con più di <strong>vent’anni di esperienza</strong> nel settore informatico, con la freschezza e la creatività dei nostri <strong>preparatissimi giovani</strong> perché pensiamo che da questa dinamica miscela possano nascere le <strong>migliori soluzioni</strong> ai problemi dei nostri clienti.</p>
+                <p>Soluzioni che, oltre a <strong>risolvere problemi</strong> specifici in modo molto affidabile, siano <strong>moderne e piacevoli</strong> da usare.</p>
+                <p>Riteniamo, infatti, che l'informatica non sia la semplice <strong>ideazione di un software</strong>, bensì un’arte che propone l'utilizzo integrato di applicazioni</p>
+            </div>
+            <div class="rightCol">
+                <p>e dispositivi che aiutano e, spesso e volentieri, risolvono problemi.</p>
+                <p>Il nostro lavoro è mirato ad <strong>individuare le modalità</strong> più corrette e semplici d’impiego degli strumenti informatici e, conseguentemente, alla creazione del software necessario affinché le <strong>performance rendano al massimo</strong>.</p>
+                <p>Abbiamo come obiettivo fornire ai nostri clienti una esperienza unica, una miscela di semplicità, originalità, versatilità e bellezza che affronti le loro richieste con l’aiuto della nostra esperienza e renda il loro <strong>lavoro più produttivo ed efficiente</strong>.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="team" class="teamSection">
+        <div class="sectionTitle">
+            <h2>conosci la squadra</h2>
+        </div>
+        <div class="teamContainer">
+            <div class="teamContainer__member">
+                <div class="apps">
+                    <img src="sources/img/team/Ernesto.png" alt="Ernesto Riera">
+                </div>
+                <h6>Ernesto Riera</h6>
+                <strong>Full Stack Developer</strong>
+                <p>Specialista in sistemi di gestione di base dati, architettura di progetti e disegno di soluzioni informatiche per molteplici tipologie di attività.</p>
+            </div>
+            <div class="teamContainer__member">
+                <div class="apps">
+                    <img src="sources/img/team/Angelo.png" alt="Angelo Massa">
+                </div>
+                <h6>Angelo Massa</h6>
+                <strong>Software Developer</strong>
+                <p>Specializzato nello sviluppo di applicazioni Windows con una grande esperienza nella gestione delle problematiche nell’industria degli aromi e nella pubblica amministrazione.</p>
+            </div>
+            <div class="teamContainer__member">
+                <div class="apps">
+                    <img src="sources/img/team/Santiago.png" alt="Santiago Riera">
+                </div>
+                <h6>Santiago Riera</h6>
+                <strong>Statistica e Algoritmi</strong>
+                <p>Specialista in sistemi di gestione di base dati, architettura di progetti e disegno di soluzioni informatiche per molteplici tipologie di attività.</p>
+            </div>
+            <div class="teamContainer__member">
+                <div class="art">
+                    <img src="sources/img/team/Ileana.png" alt="Ileana Riera Panaro">
+                </div>
+                <h6>Ileana Riera Panaro</h6>
+                <strong>Communication Manager</strong>
+                <p>Specialista in organizzazione delle soluzioni vincolate con l’arte, la comunicazione e le lingue, perché sì, un software ben fatto è anche arte e deve parlare più lingue.</p>
+            </div>
+            <div class="teamContainer__member">
+                <div class="tech">
+                    <img src="sources/img/team/Vittorio.png" alt="Vittorio Tamburini">
+                </div>
+                <h6>Vittorio Tamburini</h6>
+                <strong>Responsabile Fiscale</strong>
+                <p>Specialista nella gestione delle problematiche fiscali, nella consulenza fiscale e nell’indicatori del settore necessari alle aziende.</p>
+            </div>
+            <div class="teamContainer__member">
+                <div class="art">
+                    <img src="sources/img/team/Gianluca.png" alt="Gianluca Marchitelli">
+                </div>
+                <h6>Gianluca Marchitelli</h6>
+                <strong>UI Designer & Front-end Developer</strong>
+                <p>Specialista nella creazione di grafica e nella gestione di siti web, nella produzione di interfacce ergonomiche, moderne e reattive.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="showcase" class="showcaseSection">
+        <div class="sectionTitle">
+            <h2>showcase</h2>
+        </div>
+        <div class="showcaseContainer">
+
+            <div class="showcaseContainer__text">
+                <p>Abbiamo lavorato per aziende con ramificazioni in <strong>tutta Italia</strong>, concentrate specialmente nell’area lombarda e, talvolta, anche all’<strong>estero</strong>. Le collaborazioni svolte in questi anni spaziano negli <strong>ambiti più disparati</strong>: dalla <strong>progettazione e produzione software</strong>, all’ambito <strong>radiometrico</strong>, ma anche chimico, turistico, legale, olistico e del benessere, statistico.</p>
+                <p>Siamo riusciti ad ideare e sviluppare <strong>soluzioni ERP</strong> (Enterprise Resource Planning) integrando documenti, gestione dei magazzini, contabilità, controllo di gestione e <strong>CRM</strong> (Customer Relationship Management) con la gestione dei prospect (clienti potenziali), contatti, progetti, attività, flusso di gestione e/o approvazione. Nonché l’<strong>archiviazione documentale</strong>, gestione di firma digitale, inclusa la <strong>CRS</strong> (Carta Regionale dei Servizi), analisi dati e statistiche, cruscotti direzionali, controllo delle risorse umane e gestione degli studi.</p>
+            </div>
+
+            <div class="showcaseGlide">
+                <div data-glide-el="track" class="glide__track">
+                  <ul class="glide__slides">
+                    <li class="glide__slide">
+                        <div>
+                            <a href="sources/img/showcase/case01.jpg" target="_blank">
+                                <img src="sources/img/showcase/case01.jpg" alt="validazione smartcard">
+                            </a>
+                            <p>Servizio di validazione con la smartcard ed esposizione di web server del servizio per utilizzo da parte di piattaforme web</p>
+                        </div>
+                    </li>
+                    <li class="glide__slide">
+                        <div>
+                            <a href="sources/img/showcase/case02.jpg" target="_blank">
+                                <img src="sources/img/showcase/case02.jpg" alt="visualizzatore stato interventi">
+                            </a>
+                            <p>Visualizzatore dello stato degli interventi da parte di tecnici che lavorano in remoto</p>
+                        </div>
+                    </li>
+                    <li class="glide__slide">
+                        <div>
+                            <a href="sources/img/showcase/case03.jpg" target="_blank">
+                                <img src="sources/img/showcase/case03.jpg" alt="gestione ticketing">
+                            </a>
+                            <p>Statistiche di controllo e gestione di un sito di ticketing</p>
+                        </div>
+                    </li>
+                    <li class="glide__slide">
+                        <div>
+                            <a href="sources/img/showcase/case04.jpg" target="_blank">
+                                <img src="sources/img/showcase/case04.jpg" alt="gestione dichiarazioni">
+                            </a>
+                            <p>Sito web per la gestione delle dichiarazione dei consorziati e lo scambio di documenti e notifiche</p>
+                        </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="glide__arrows" data-glide-el="controls">
+                    <div class="glide__arrow glide__arrow--left" data-glide-dir="<" onclick="arrowsReset()">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70 70">
+                            <defs>
+                                <style>
+                                    .left_cls-1 {
+                                        fill: none;
+                                    }
+                                
+                                    .left_cls-2 {
+                                        fill: #fdfdfd;
+                                    }
+                                </style>
+                            </defs>
+                            <title>left arrow</title>
+                            <g id="Layer_1-2" data-name="Layer 1">
+                                <rect class="left_cls-1" width="70" height="70"/>
+                                <path class="left_cls-2" d="M23.94,36.55,41.66,54.28a2.2,2.2,0,0,0,3.08,0L46.05,53a2.2,2.2,0,0,0,0-3.08L31.16,35l14.9-14.9a2.17,2.17,0,0,0,0-3.08l-1.3-1.31a2.2,2.2,0,0,0-3.08,0L23.94,33.46a2.2,2.2,0,0,0,0,3.1Z"/>
+                            </g>
+                          </svg>
+                    </div>
+                    <div class="glide__arrow glide__arrow--right" data-glide-dir=">" onclick="arrowsReset()">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70 70">
+                            <defs>
+                                <style>
+                                    .right_cls-1 {
+                                        fill: none;
+                                    }
+                                
+                                    .right_cls-2 {
+                                        fill: #fdfdfd;
+                                    }
+                                </style>
+                            </defs>
+                            <title>right arrow</title>
+                            <g id="Layer_1-2" data-name="Layer 1">
+                                <rect class="right_cls-1" width="70" height="70"/>
+                                <path class="right_cls-2" d="M23.94,36.55,41.66,54.28a2.2,2.2,0,0,0,3.08,0L46.05,53a2.2,2.2,0,0,0,0-3.08L31.16,35l14.9-14.9a2.17,2.17,0,0,0,0-3.08l-1.3-1.31a2.2,2.2,0,0,0-3.08,0L23.94,33.46a2.2,2.2,0,0,0,0,3.1Z"/>
+                            </g>
+                          </svg>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contacts" class="contactSection">
+        <div class="sectionTitle">
+            <h2>contattaci</h2>
+        </div>
+        <div class="contactContainer">
+            <form id="contactForm" action="" method="">
+                <input type="text" id="formName" placeholder="Nome" name="name" required
+                    oninvalid="this.setCustomValidity('Non accettiamo messaggi anonimi :c')"
+                    oninput="this.setCustomValidity('')"  />
+                <input type="email" id="formEmail" placeholder="eMail" name="email" required
+                    oninvalid="this.setCustomValidity('Senza mail non possiamo risponderti :c')"
+                    oninput="this.setCustomValidity('')"  />
+                <textarea id="formText" placeholder="Messaggio" name="message" form="contactForm" required
+                    maxlength="500" rows="6"
+                    oninvalid="this.setCustomValidity('Se non hai niente da dire non ha senso :c')"
+                    oninput="this.setCustomValidity('')"></textarea>
+                <input id="formSubmit" type="submit" value="invia">
+            </form>
+        </div>
+        <div class="redBall">
+            <div class="contactSection__tutorial">
+                <p>puoi</p>
+                <p>- compilare il form</p>
+                <p>- chiamarci al <a href="tel:+393480910896">3480910896</a></p>
+                <p>- scriverci su <a href="https://api.whatsapp.com/send?phone=393480910896&text=Ciao,%20mi%20piacerebbe%20saperne%20di%20pi%C3%B9%20su">whatsapp</a></p>
+                <p>- mandarci una <a href="mailto:ernesto@riera.it">mail</a></p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <img class="footerLogo" src="sources/img/footLogo.png" />
+        <span>P.iva: IT-10925620964</span>
+        <span>Via Santa Tecla, 5 - 20122 Milano</span>
+        <a href="#">
+            <div class="topButton">
+                <span>top</span>
+                <div class="arrowUp">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70 70">
+                        <defs>
+                            <style>
+                                .right_cls-1 {
+                                    fill: none;
+                                }
+                            
+                                .right_cls-2 {
+                                    fill: #fdfdfd;
+                                }
+                            </style>
+                        </defs>
+                        <title>right arrow</title>
+                        <g id="Layer_1-2" data-name="Layer 1">
+                            <rect class="right_cls-1" width="70" height="70"/>
+                            <path class="right_cls-2" d="M23.94,36.55,41.66,54.28a2.2,2.2,0,0,0,3.08,0L46.05,53a2.2,2.2,0,0,0,0-3.08L31.16,35l14.9-14.9a2.17,2.17,0,0,0,0-3.08l-1.3-1.31a2.2,2.2,0,0,0-3.08,0L23.94,33.46a2.2,2.2,0,0,0,0,3.1Z"/>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+        </a>
+    </footer>
+
+    <script src="scripts/servicesFilter.js"></script>
+    <script src="scripts/startServiceG.js"></script>
+    <script src="scripts/startShowcaseG.js"></script>
+
+</body>
+
+</html>

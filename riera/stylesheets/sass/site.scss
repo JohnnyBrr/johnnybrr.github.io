@@ -1,0 +1,18 @@
+/* Fonts */
+@import '../fonts/fontfaces';
+
+/* Reset & Variables*/
+@import 'reset';
+@import 'variables';
+
+/* Plugins */
+@import "../../node_modules/@glidejs/glide/src/assets/sass/glide.core";
+
+/* Style */
+@import 'layout';
+@import 'landing';
+@import 'services';
+@import 'about';
+@import 'team';
+@import 'showcase';
+@import 'contacts';

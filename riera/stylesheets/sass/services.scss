@@ -1,0 +1,160 @@
+.serviceSection {
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    padding: 110px 0 50px 0;
+
+    .sectionTitle {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 0 100px 25px 100px;
+
+        h2 {
+            font-family: $synco;
+            font-weight: bold;
+            font-size: $h2;
+            white-space: nowrap;
+        }
+        div {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            button {
+                font-family: $synco;
+                font-weight: bold;
+                font-size: $h4;
+                color: $rieraWhite;
+                text-shadow: 1px 1px 0px $rieraBlack;
+                margin: 0 20px;
+                padding: 5px 10px;
+                background-color: rgba($rieraBlack , .5);
+                border: none;
+                border-radius: 5px;
+                -webkit-box-shadow: 0px 0px 15px 0px rgba($rieraBlack , .5);
+                -moz-box-shadow: 0px 0px 15px 0px rgba($rieraBlack , .5);
+                box-shadow: 0px 0px 15px 0px rgba($rieraBlack , .5);
+                outline: none;
+                cursor: pointer;
+                transition: $link-tr;
+            }
+            button:hover {
+                color: $rieraBlack;
+                text-shadow: 1px 1px 0px $rieraWhite;
+            }
+        }
+        .glide__arrows {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 60%;
+            margin: 35px auto;
+        }
+        .glide__arrow {
+            min-width: 70px;
+            height: 70px;
+            border-radius: 100%;
+            background-color: $rieraRed;
+            cursor: pointer;
+            margin: 0 10px;
+
+            svg {
+                height: 70px;
+            }
+            &--left {
+                -webkit-box-shadow: -3px 3px 5px 0px rgba(0,0,0,0.25);
+                -moz-box-shadow: -3px 3px 5px 0px rgba(0,0,0,0.25);
+                box-shadow: -3px 3px 5px 0px rgba(0,0,0,0.25);
+            }
+            .left_cls-2 {
+                transition: $link-tr;
+            }
+            &--left:hover .left_cls-2 {
+                fill: rgba($rieraBlack , .75);
+            }
+            &--right {
+                transform: rotate(180deg);
+                -webkit-box-shadow: -3px -3px 5px 0px rgba(0,0,0,0.25);
+                -moz-box-shadow: -3px -3px 5px 0px rgba(0,0,0,0.25);
+                box-shadow: -3px -3px 5px 0px rgba(0,0,0,0.25);
+            }
+            .right_cls-2 {
+                transition: $link-tr;
+            }
+            &--right:hover .right_cls-2 {
+                fill: rgba($rieraBlack , .75);
+            }
+        }
+    }
+    .glide {
+
+        &__track {
+            height: 620px;
+            cursor: grab;
+        }
+        &__track:active {
+            cursor: grabbing;
+        }
+        &__slides {
+            height: 620px;
+            padding-top: 35px;
+
+            .turnOff {
+                opacity: .5;
+
+            }
+        }
+        &__slide {
+            transition: $link-tr;
+    
+            &--active {
+                z-index: 99;
+            }
+            div {
+                width: 550px;
+                height: 550px;
+                padding: 50px 0;
+                border-radius: 100%;
+                -webkit-box-shadow: 0px 0px 35px 0px rgba(0,0,0,0.5);
+                -moz-box-shadow: 0px 0px 35px 0px rgba(0,0,0,0.5);
+                box-shadow: 0px 0px 35px 0px rgba(0,0,0,0.5);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                img {
+                    width: auto;
+                    height: 105px;
+                }
+                h6 {
+                    font-family: $synco;
+                    font-weight: 200;
+                    font-size: $sub-h2;
+                    text-align: center;
+                    color: $rieraWhite;
+                    margin-top: 30px;
+                }
+                p {
+                    width: 380px;
+                    font-family: $jaldi;
+                    font-weight: normal;
+                    font-size: $regular-p;
+                    color: $rieraWhite;
+                    line-height: 24px;
+                    margin-top: 35px;
+                }
+            }
+            .artCol {
+                background-color: $rieraRed;
+            }
+            .appsCol {
+                background-color: $rieraBlue;
+            }
+            .techCol {
+                background-color: $rieraBlack;
+            }
+        }
+    }
+}
