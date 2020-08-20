@@ -30,6 +30,11 @@
 
         <script>
             $(document).ready(function () {
+                if( /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && safari.pushNotification)) ) {
+                    $("input").css("line-height" , "normal")
+                } else {
+                    console.log("not safari")
+                }
                 $("#loginForm").kendoForm({
                     validatable: {
                         errorTemplate: "<span><div>elemento errato</div></span>"
