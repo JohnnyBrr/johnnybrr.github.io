@@ -5,58 +5,15 @@
     <head>
         <meta charset="utf-8">
 
-        <title>ADV Manager Login</title>
+        <title>ADV Manager</title>
         <meta name="description" content="ADV Manager per l'azienda Matteotti.">
         <meta name="author" content="Artel">
-
-        <link rel="stylesheet" href="styles/kendo.common.min.css">
-        <link rel="stylesheet" href="styles/style.min.css">
-
-        <script src="js/lib/jQuery/jquery-3.5.1.min.js"></script>
-        <script src="js/lib/kendo/kendo.all.min.js"></script>
     </head>
 
     <body>
-        <section class="loginContainer">
-            <div class="loginContainer__bkg"></div>
-            <div class="loginContainer__overlay"></div>
-
-            <div class="loginContainer__sidebar">
-                <p>A R E A&nbsp;&nbsp;&nbsp;R I S E R V A T A</p>
-                <h1>PAMBIANCO NEWS ADV MANAGER</h1>
-                <div id="loginForm"></div>
-            </div>
-        </section>
-
+        
         <script>
-            $(document).ready(function () {
-                $("#loginForm").kendoForm({
-                    validatable: {
-                        errorTemplate: "<span><div>elemento errato</div></span>"
-                    },
-                    orientation: "vertical",
-                    formData: {
-                        Username: "",
-                        Password: ""
-                    },
-                    items: [
-                        {
-                            field: "Username",
-                            label: "Username",
-                            validation: { required: true }
-                        },
-                        {
-                            field: "Password",
-                            label: "Password",
-                            validation: { required: true }
-                        }
-                    ]
-                });
-                $(".k-form-submit").html("ACCESSO");
-                $("#Username").attr("placeholder", "inserire username");
-                $("#Password").attr("type", "password");
-                $("#Password").attr("placeholder", "inserire password");
-            });
+            window.location = "https://johnnybrr.github.io/adManager/login/";
         </script>
 
     </body>
