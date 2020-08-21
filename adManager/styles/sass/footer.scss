@@ -1,0 +1,83 @@
+#advFooter {
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 100%;
+    height: 60px;
+    padding: 0 45px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $pamw;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+
+    .navPanel {
+        display: flex;
+        flex-direction: row;
+        align-self: flex-end;
+
+        &__scheda {
+            width: 150px;
+            height: 40px;
+            cursor: pointer;
+            font-family: $rob;
+            font-weight: $medium;
+            font-size: 14px;
+            letter-spacing: .1em;
+            text-align: center;
+            line-height: 40px;
+            color: $pamMidk;
+            border-radius: 3px 3px 0 0;
+            transition: .3s ease-out;
+
+            &:hover {
+                color: $pamr;
+            }
+        }
+        .activePanel {
+            background-color: rgba($pamr , .25);
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+            border-bottom: 3px solid $pamr;
+            color: $pamr;
+        }
+    }
+    .totalsPanel {
+        width: 660px;
+        height: 30px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        &__parziale {
+            display: none;
+            font-family: $rob;
+            font-weight: $medium;
+            font-size: 14px;
+            line-height: 30px;
+            letter-spacing: 0.1em;
+            color: $pamr;
+        }
+        .activeParziale {
+            display: block;
+        }
+        &__totale {
+            padding-left: 55px;
+            border-left: solid 2px $pamr;
+            font-family: $rob;
+            font-weight: $medium;
+            font-size: 14px;
+            line-height: 30px;
+            letter-spacing: 0.1em;
+            color: $pamr;
+        }
+        span {
+            font-family: $rob;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 30px;
+            letter-spacing: 0.1em;
+            color: $pamFullk;
+        }
+    }
+}

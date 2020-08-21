@@ -1,4 +1,5 @@
-.stampaContainer {
+.newsContainer {
+    display: none;
     position: relative;
     width: 100%;
     min-height: 900px;
@@ -41,7 +42,7 @@
                 }
             }
         }
-        #addStampa, #delStampa, #editStampa, #setStampa {
+        #addNews, #delNews, #editNews, #hideNews, #showNews, #setNews {
             width: 150px;
             height: 40px;
             padding-left: 20px;
@@ -60,11 +61,11 @@
             color: $pamw;
             transition: .2s ease-out;
         }
-        #addStampa:hover, #delStampa:hover, #editStampa:hover, #setStampa:hover {
+        #addNews:hover, #delNews:hover, #editNews:hover, #hideNews:hover, #showNews:hover, #setNews:hover {
             background-color: $pamw;
             color: $pamr;
         }
-        #delStampa {
+        #delNews {
             display: none;
         }
     }

@@ -30,11 +30,6 @@
 
         <script>
             $(document).ready(function () {
-                if( /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && safari.pushNotification)) ) {
-                    $("input").css("line-height" , "normal")
-                } else {
-                    console.log("not safari")
-                }
                 $("#loginForm").kendoForm({
                     validatable: {
                         errorTemplate: "<span><div>elemento errato</div></span>"
@@ -61,9 +56,17 @@
                 $("#Username").attr("placeholder", "inserire username");
                 $("#Password").attr("type", "password");
                 $("#Password").attr("placeholder", "inserire password");
+                
+                //vvvDELETE THISvvv
+                $( ".k-form-submit" ).click(function() {
+                    window.location.href = "https://johnnybrr.github.io/adManager/";
+                });
             });
         </script>
 
+        <!--vvvREMOVE THISvvv-->
+        <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+        <!--^^^REMOVE THIS^^^-->
     </body>
 
 </html>
