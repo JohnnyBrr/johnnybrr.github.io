@@ -14,293 +14,194 @@
 
         <script src="js/lib/jQuery/jquery-3.5.1.min.js"></script>
         <script src="js/lib/kendo/kendo.all.min.js"></script>
+        <script src="js/code/magazine.js"></script>
+        <script src="js/code/functions.js"></script>
+        <script src="js/lib/kendo/Kendo.ZDataSource.v1.0.js"></script>
     </head>
 
     <body>
 
-        <!--SEZIONE MAGAZINE-->
-        <div class="stampaContainer containerSection">
-            <header>
-                <div class="headContainer">
-                    <button id="addStampa" onmouseover="changeImg()">Aggiungi</button>
-                    <button id="delStampa">Elimina</button>
-                    <button id="editStampa">Modifica</button>
-                    <div class="headerText">
-                        <p>Per inserire una nuova voce: seleziona la prima riga e clicca sul bottone <strong>AGGIUNGI</strong>.</p>
-                        <p>Per editare una voce esistente: utilizza il bottone <strong>MODIFICA</strong>, selezionando la riga di riferimento. </p>
-                    </div>
-                </div>
-                <button id="setStampa">Settings</button>
-            </header>
-        </div>
-        <script>
-            $(document).ready(function () {
-                    $("#addStampa").kendoButton({
-                        imageUrl: "img/icons/add_circle.svg"
-                    });
-                    $("#delStampa").kendoButton({
-                        imageUrl: "img/icons/delete.svg"
-                    });
-                    $("#editStampa").kendoButton({
-                        imageUrl: "img/icons/edit.svg"
-                    });
-                    $("#setStampa").kendoButton({
-                        imageUrl: "img/icons/settings.svg"
-                    });
-                });
-        </script>
-        <script>
-            $( "#addStampa" ).hover(
-                function() {
-                    $( "#addStampa > img" ).attr("src", "img/icons/Hadd_circle.svg" );
-                }, function() {
-                    $( "#addStampa > img" ).attr("src", "img/icons/add_circle.svg" );
-                }
-            );
-            $( "#delStampa" ).hover(
-                function() {
-                    $( "#delStampa > img" ).attr("src", "img/icons/Hdelete.svg" );
-                }, function() {
-                    $( "#delStampa > img" ).attr("src", "img/icons/delete.svg" );
-                }
-            );
-            $( "#editStampa" ).hover(
-                function() {
-                    $( "#editStampa > img" ).attr("src", "img/icons/Hedit.svg" );
-                }, function() {
-                    $( "#editStampa > img" ).attr("src", "img/icons/edit.svg" );
-                }
-            );
-            $( "#setStampa" ).hover(
-                function() {
-                    $( "#setStampa > img" ).attr("src", "img/icons/Hsettings.svg" );
-                }, function() {
-                    $( "#setStampa > img" ).attr("src", "img/icons/settings.svg" );
-                }
-            );
-            //vvvDELETE THISvvv
-            $( "#setStampa" ).click(function() {
-                window.location.href = "https://johnnybrr.github.io/adManager/login";
-            });
-        </script>
+        <!--SEZIONE LOGIN-->
+        <section class="loginContainer">
+            <div class="loginContainer__bkg"></div>
+            <div class="loginContainer__overlay"></div>
 
-        <!--SEZIONE NEWSLETTER-->
-        <div class="newsContainer containerSection">
-            <header>
-                <div class="headContainer">
-                    <button id="addNews" onmouseover="changeImg()">Aggiungi</button>
-                    <button id="delNews">Elimina</button>
-                    <button id="editNews">Modifica</button>
-                    <button id="hideNews">Nascondi</button>
-                    <button id="showNews">Mostra</button>
-                    <div class="headerText">
-                        <p>Seleziona una cella per aggiungere/modificare il contenuto.</p>
-                        <p>Seleziona il titolo della colonna da nascondere e clicca sul bottone <strong>NASCONDI</strong>.</p>
-                    </div>
-                </div>
-                <button id="setNews">Settings</button>
-            </header>
-        </div>
-        <script>
-            $(document).ready(function () {
-                    $("#addNews").kendoButton({
-                        imageUrl: "img/icons/add_circle.svg"
-                    });
-                    $("#delNews").kendoButton({
-                        imageUrl: "img/icons/delete.svg"
-                    });
-                    $("#editNews").kendoButton({
-                        imageUrl: "img/icons/edit.svg"
-                    });
-                    $("#hideNews").kendoButton({
-                        imageUrl: "img/icons/hide.svg"
-                    });
-                    $("#showNews").kendoButton({
-                        imageUrl: "img/icons/show.svg"
-                    });
-                    $("#setNews").kendoButton({
-                        imageUrl: "img/icons/settings.svg"
-                    });
-                });
-        </script>
-        <script>
-            $( "#addNews" ).hover(
-                function() {
-                    $( "#addNews > img" ).attr("src", "img/icons/Hadd_circle.svg" );
-                }, function() {
-                    $( "#addNews > img" ).attr("src", "img/icons/add_circle.svg" );
-                }
-            );
-            $( "#delNews" ).hover(
-                function() {
-                    $( "#delNews > img" ).attr("src", "img/icons/Hdelete.svg" );
-                }, function() {
-                    $( "#delNews > img" ).attr("src", "img/icons/delete.svg" );
-                }
-            );
-            $( "#editNews" ).hover(
-                function() {
-                    $( "#editNews > img" ).attr("src", "img/icons/Hedit.svg" );
-                }, function() {
-                    $( "#editNews > img" ).attr("src", "img/icons/edit.svg" );
-                }
-            );
-            $( "#hideNews" ).hover(
-                function() {
-                    $( "#hideNews > img" ).attr("src", "img/icons/Hhide.svg" );
-                }, function() {
-                    $( "#hideNews > img" ).attr("src", "img/icons/hide.svg" );
-                }
-            );
-            $( "#showNews" ).hover(
-                function() {
-                    $( "#showNews > img" ).attr("src", "img/icons/Hshow.svg" );
-                }, function() {
-                    $( "#showNews > img" ).attr("src", "img/icons/show.svg" );
-                }
-            );
-            $( "#setNews" ).hover(
-                function() {
-                    $( "#setNews > img" ).attr("src", "img/icons/Hsettings.svg" );
-                }, function() {
-                    $( "#setNews > img" ).attr("src", "img/icons/settings.svg" );
-                }
-            );
-            //vvvDELETE THISvvv
-            $( "#setNews" ).click(function() {
-                window.location.href = "https://johnnybrr.github.io/adManager/login";
-            });
-        </script>
-
-        <!--SEZIONE SITO WEB-->
-        <div class="sitoContainer containerSection">
-            <header>
-                <div class="headContainer">
-                    <button id="addSito" onmouseover="changeImg()">Aggiungi</button>
-                    <button id="delSito">Elimina</button>
-                    <button id="editSito">Modifica</button>
-                    <button id="hideSito">Nascondi</button>
-                    <button id="showSito">Mostra</button>
-                    <div class="headerText">
-                        <p>Seleziona una cella per aggiungere/modificare il contenuto.</p>
-                        <p>Seleziona il titolo della colonna da nascondere e clicca sul bottone <strong>NASCONDI</strong>.</p>
-                    </div>
-                </div>
-                <button id="setSito">Settings</button>
-            </header>
-        </div>
-        <script>
-            $(document).ready(function () {
-                    $("#addSito").kendoButton({
-                        imageUrl: "img/icons/add_circle.svg"
-                    });
-                    $("#delSito").kendoButton({
-                        imageUrl: "img/icons/delete.svg"
-                    });
-                    $("#editSito").kendoButton({
-                        imageUrl: "img/icons/edit.svg"
-                    });
-                    $("#hideSito").kendoButton({
-                        imageUrl: "img/icons/hide.svg"
-                    });
-                    $("#showSito").kendoButton({
-                        imageUrl: "img/icons/show.svg"
-                    });
-                    $("#setSito").kendoButton({
-                        imageUrl: "img/icons/settings.svg"
-                    });
-                });
-        </script>
-        <script>
-            $( "#addSito" ).hover(
-                function() {
-                    $( "#addSito > img" ).attr("src", "img/icons/Hadd_circle.svg" );
-                }, function() {
-                    $( "#addSito > img" ).attr("src", "img/icons/add_circle.svg" );
-                }
-            );
-            $( "#delSito" ).hover(
-                function() {
-                    $( "#delSito > img" ).attr("src", "img/icons/Hdelete.svg" );
-                }, function() {
-                    $( "#delSito > img" ).attr("src", "img/icons/delete.svg" );
-                }
-            );
-            $( "#editSito" ).hover(
-                function() {
-                    $( "#editSito > img" ).attr("src", "img/icons/Hedit.svg" );
-                }, function() {
-                    $( "#editSito > img" ).attr("src", "img/icons/edit.svg" );
-                }
-            );
-            $( "#hideSito" ).hover(
-                function() {
-                    $( "#hideSito > img" ).attr("src", "img/icons/Hhide.svg" );
-                }, function() {
-                    $( "#hideSito > img" ).attr("src", "img/icons/hide.svg" );
-                }
-            );
-            $( "#showSito" ).hover(
-                function() {
-                    $( "#showSito > img" ).attr("src", "img/icons/Hshow.svg" );
-                }, function() {
-                    $( "#showSito > img" ).attr("src", "img/icons/show.svg" );
-                }
-            );
-            $( "#setSito" ).hover(
-                function() {
-                    $( "#setSito > img" ).attr("src", "img/icons/Hsettings.svg" );
-                }, function() {
-                    $( "#setSito > img" ).attr("src", "img/icons/settings.svg" );
-                }
-            );
-            //vvvDELETE THISvvv
-            $( "#setSito" ).click(function() {
-                window.location.href = "https://johnnybrr.github.io/adManager/login";
-            });
-        </script>
-
-        <!--SEZIONE FOOTER-->
-        <footer id="advFooter">
-            <div class="navPanel">
-                <div class="navPanel__scheda magPanel activePanel">MAGAZINE</div>
-                <div class="navPanel__scheda newsPanel">NEWSLETTER</div>
-                <div class="navPanel__scheda sitePanel">SITO WEB</div>
+            <div class="loginContainer__sidebar">
+                <p>A R E A&nbsp;&nbsp;&nbsp;R I S E R V A T A</p>
+                <h1>PAMBIANCO NEWS ADV MANAGER</h1>
+                <div id="loginForm"></div>
             </div>
-            <div class="totalsPanel">
-                <p class="totalsPanel__parziale magParz activeParziale">Fatturato parziale MAGAZINE: <span id="magTot">€ 000.000</span></p>
-                <p class="totalsPanel__parziale newsParz">Fatturato parziale NEWSLETTER: <span id="newsTot">€ 000.000</span></p>
-                <p class="totalsPanel__parziale siteParz">Fatturato parziale SITO WEB: <span id="siteTot">€ 000.000</span></p>
-                <p class="totalsPanel__totale">Fatturato totale ADV: <span id="advTot">€ 000.000</span></p>
-            </div>
-        </footer>
+        </section>
 
         <script>
-            $(".navPanel__scheda").click(function() {
-                if( $(this).hasClass("magPanel") ) {
-                    $(".navPanel__scheda").removeClass("activePanel");
-                    $(this).addClass("activePanel");
-                    $(".totalsPanel__parziale").removeClass("activeParziale");
-                    $(".magParz").addClass("activeParziale");
-                    $(".containerSection").css("display", "none");
-                    $(".stampaContainer").fadeIn(400);
-                } else if( $(this).hasClass("newsPanel") ) {
-                    $(".navPanel__scheda").removeClass("activePanel");
-                    $(this).addClass("activePanel");
-                    $(".totalsPanel__parziale").removeClass("activeParziale");
-                    $(".newsParz").addClass("activeParziale");
-                    $(".containerSection").css("display", "none");
-                    $(".newsContainer").fadeIn(400);
-                } else if( $(this).hasClass("sitePanel") ) {
-                    $(".navPanel__scheda").removeClass("activePanel");
-                    $(this).addClass("activePanel");
-                    $(".totalsPanel__parziale").removeClass("activeParziale");
-                    $(".siteParz").addClass("activeParziale");
-                    $(".containerSection").css("display", "none");
-                    $(".sitoContainer").fadeIn(400);
-                }
-            })
+            $(document).ready(function () {
+                $("#loginForm").kendoForm({
+                    validatable: {
+                        errorTemplate: "<span><div>elemento errato</div></span>"
+                    },
+                    orientation: "vertical",
+                    formData: {
+                        Username: "",
+                        Password: ""
+                    },
+                    items: [
+                        {
+                            field: "Username",
+                            label: "Username",
+                            validation: { required: true }
+                        },
+                        {
+                            field: "Password",
+                            label: "Password",
+                            validation: { required: true }
+                        }
+                    ]
+                });
+                $(".k-form-submit").html("ACCESSO");
+                $("#Username").attr("placeholder", "inserire username");
+                $("#Password").attr("type", "password");
+                $("#Password").attr("placeholder", "inserire password");
+                $(".k-form-submit").click(function() {
+                    $(".loginContainer").hide();
+                    $("main").fadeIn(600);
+                })
+            });
         </script>
+
+        <!--APPLICAZIONE-->
+        <main>
+            <!--SEZIONE MAGAZINE-->
+            <div class="stampaContainer containerSection">
+                <div class="headerBkg"></div>
+                <header>
+                    <div class="headContainer">
+                        <button id="addStampa">Aggiungi</button>
+                        <button id="delStampa">Elimina</button>
+                        <button id="editStampa">Modifica</button>
+                        <div class="headerText">
+                            <p>Per inserire una nuova voce: seleziona la prima riga e clicca sul bottone <strong>AGGIUNGI</strong>.</p>
+                            <p>Per editare una voce esistente: utilizza il bottone <strong>MODIFICA</strong>, selezionando la riga di riferimento. </p>
+                        </div>
+                    </div>
+                    <button id="setStampa">Settings</button>
+                </header>
+                <div class="magTitleBar">
+                    <button id="magTitlePrev"></button>
+                    <h3>N°<span id="magTitleNumber">I</span> &ndash; <span id="magTitleMonth">GENNAIO</span>/<span id="magTitleYear">2020</span></h3>
+                    <div class="magTitleInfo">
+                        <p>Pubblicità: <span id="magNumAdv">Nr. 00</span></p>
+                        <p>Fatturato: <span id="magTotAdv">€ 000.000</span></p>
+                        <p>&#124;</p>
+                        <p>Endorsement: <span id="magNumEnd">Nr. 00</span></p>
+                        <p>Fatturato: <span id="magTotEnd">€ 000.000</span></p>
+                    </div>
+                    <button id="magTitleNext"></button>
+                </div>
+                <div class="magGridsContainer">
+                    <div id="advGrid"></div>
+                    <div id="endGrid"></div>
+                </div>
+            </div>
+
+            <script src="js/code/kendoMag.js"></script>
+
+            <!--SEZIONE NEWSLETTER-->
+            <div class="newsContainer containerSection">
+                <header>
+                    <div class="headContainer">
+                        <button id="addNews" onmouseover="changeImg()">Aggiungi</button>
+                        <button id="delNews">Elimina</button>
+                        <button id="editNews">Modifica</button>
+                        <button id="hideNews">Nascondi</button>
+                        <button id="showNews">Mostra</button>
+                        <div class="headerText">
+                            <p>Seleziona una cella per aggiungere/modificare il contenuto.</p>
+                            <p>Seleziona il titolo della colonna da nascondere e clicca sul bottone <strong>NASCONDI</strong>.</p>
+                        </div>
+                    </div>
+                    <button id="setNews">Settings</button>
+                </header>
+            </div>
+            <script>
+                $(document).ready(function () {
+                        $("#addNews").kendoButton({
+                            imageUrl: "img/icons/add_circle.svg"
+                        });
+                        $("#delNews").kendoButton({
+                            imageUrl: "img/icons/delete.svg"
+                        });
+                        $("#editNews").kendoButton({
+                            imageUrl: "img/icons/edit.svg"
+                        });
+                        $("#hideNews").kendoButton({
+                            imageUrl: "img/icons/hide.svg"
+                        });
+                        $("#showNews").kendoButton({
+                            imageUrl: "img/icons/show.svg"
+                        });
+                        $("#setNews").kendoButton({
+                            imageUrl: "img/icons/settings.svg"
+                        });
+                    });
+            </script>
+
+            <!--SEZIONE SITO WEB-->
+            <div class="sitoContainer containerSection">
+                <header>
+                    <div class="headContainer">
+                        <button id="addSito" onmouseover="changeImg()">Aggiungi</button>
+                        <button id="delSito">Elimina</button>
+                        <button id="editSito">Modifica</button>
+                        <button id="hideSito">Nascondi</button>
+                        <button id="showSito">Mostra</button>
+                        <div class="headerText">
+                            <p>Seleziona una cella per aggiungere/modificare il contenuto.</p>
+                            <p>Seleziona il titolo della colonna da nascondere e clicca sul bottone <strong>NASCONDI</strong>.</p>
+                        </div>
+                    </div>
+                    <button id="setSito">Settings</button>
+                </header>
+            </div>
+            <script>
+                $(document).ready(function () {
+                        $("#addSito").kendoButton({
+                            imageUrl: "img/icons/add_circle.svg"
+                        });
+                        $("#delSito").kendoButton({
+                            imageUrl: "img/icons/delete.svg"
+                        });
+                        $("#editSito").kendoButton({
+                            imageUrl: "img/icons/edit.svg"
+                        });
+                        $("#hideSito").kendoButton({
+                            imageUrl: "img/icons/hide.svg"
+                        });
+                        $("#showSito").kendoButton({
+                            imageUrl: "img/icons/show.svg"
+                        });
+                        $("#setSito").kendoButton({
+                            imageUrl: "img/icons/settings.svg"
+                        });
+                    });
+            </script>
+
+            <!--SEZIONE FOOTER-->
+            <footer id="advFooter">
+                <div class="navPanel">
+                    <div class="navPanel__scheda magPanel activePanel">MAGAZINE</div>
+                    <div class="navPanel__scheda newsPanel">NEWSLETTER</div>
+                    <div class="navPanel__scheda sitePanel">SITO WEB</div>
+                </div>
+                <div class="totalsPanel">
+                    <p class="totalsPanel__parziale magParz activeParziale">Fatturato parziale MAGAZINE: <span id="magTot">€ 000.000</span></p>
+                    <p class="totalsPanel__parziale newsParz">Fatturato parziale NEWSLETTER: <span id="newsTot">€ 000.000</span></p>
+                    <p class="totalsPanel__parziale siteParz">Fatturato parziale SITO WEB: <span id="siteTot">€ 000.000</span></p>
+                    <p class="totalsPanel__totale">Fatturato totale ADV: <span id="advTot">€ 000.000</span></p>
+                </div>
+            </footer>
+
+            <script src="js/code/interactions.js"></script>
+        </main>
 
         <!--vvvREMOVE THISvvv-->
         <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
