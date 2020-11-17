@@ -108,10 +108,12 @@ main {
             right: 30px;
             width: 24px;
             filter: invert(1);
+            -webkit-filter: invert(1);
             transition: .2s ease-in;
         }
         #aniMenu:hover {
             filter: invert(0);
+            -webkit-filter: invert(0);
         }
         .landingSection {
             padding: 50px;

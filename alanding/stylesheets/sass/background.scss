@@ -84,6 +84,7 @@
         width: 100%;
         height: 100%;
         filter: blur(250px);
+        -webkit-filter: blur(250px);
     
         &__c1 {
             position: absolute;
@@ -158,6 +159,7 @@
     }
     .bkgContainer.animation3 {
         filter: none;
+        -webkit-filter: none;
             
         /*Fallback if gradeints don't work */
         background: $artBlue;
@@ -212,6 +214,7 @@
 
         .bkgContainer {
             filter: blur(100px);
+            -webkit-filter: blur(100px);
         }
         .bkgContainer__c1 {
             width: 100vh;
