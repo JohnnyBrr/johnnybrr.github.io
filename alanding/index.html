@@ -1,0 +1,169 @@
+<!DOCTYPE HTML>
+
+<html lang = "it">
+    <head>
+        <title>ARTEL</title>
+        <link rel="icon" type="image/png" href="img/favicon.png" />
+        <meta charset = "UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="stylesheets/style.min.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body>
+
+        <div class="bkgJumbo">
+            <div class="bkgContainer">
+                <div class="bkgContainer__c1 animation1"></div>
+                <div class="bkgContainer__c2 animation1"></div>
+                <div class="bkgContainer__c3 animation1"></div>
+            </div>
+        </div>
+
+        <main>
+
+            <img id="aniMenu" src="img/responsive-bkg.png" alt="background icon" />
+
+            <div class="bkgContainer__ctrl">
+                <p class="anim01 active">Animazione 1</p>
+                <p class="anim02">Animazione 2</p>
+                <p class="anim03">Animazione 3</p>
+            </div>
+
+            <section class="landingSection">
+
+                <div class="logoContainer">
+                    <img src="img/artelLogo.svg" alt="logo di Artel" />
+                    <span></span>
+                    <p>empowerment<br>through technology</p>
+                </div>
+
+                <div class="ctaContainer">
+
+                    <h1>Benvenuto sulla nuova piattaforma Artel.</h1>
+
+                    <div class="ctaElement">
+
+                        <p>
+                            Stiamo sviluppando un'esperienza digitale innovativa,
+                            <br>per immaginare e costruire insieme il futuro tecnologico della tua azienda.
+                        </p>
+
+                        <p>
+                            Contattaci per qualsiasi curiosità e scopri i dettalgi della nuova offerta.
+                        </p>
+
+                        <a href="mailto:a.morlacchi@artelnet.com?subject=Artelnet.com:%20Richiesta%20informazioni&body=%20Buongiorno,%0Dla%20presente%20per%20chiedere%20informazioni%20in%20merito%20a%0D">
+                            <button>scopri di più</button>
+                        </a>
+
+                    </div>
+
+                    <div class="ctaElement">
+
+                        <p>
+                            Sei già nostro cliente? Effettua qui l'accesso alla tua area riservata:
+                        </p>
+
+                        <a href="../alogin/">
+                            <button>area riservata</button>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+        <footer>
+
+            <span></span>
+            <p><a href="#">download assisto.exe</a> <em>|</em> artel lombardia s.r.l. _ p.iva/tva: 02608720120 _ via milano, 1 - 20045 / lainate (mi) _ 02 93 79 9289 | via f. malavolti, 33 - 41126 / modena (mo) _ 059 251 590</p>
+            <span></span>
+
+        </footer>
+
+        <script>
+            $(document).ready(function() {
+                if (window.innerWidth < 900) {
+                    $(".anim01, .anim02, .anim03").removeClass("active");
+                    $(".anim03").addClass("active");
+                    $(".bkgContainer__c1, .bkgContainer__c2, .bkgContainer__c3").removeClass("animation2");
+                    $(".bkgContainer__c1, .bkgContainer__c2, .bkgContainer__c3").removeClass("animation1");
+                    $(".bkgContainer__c1, .bkgContainer__c2, .bkgContainer__c3").addClass("animation3");
+                    $(".bkgContainer").addClass("animation3");
+                }
+                $(window).resize(function() {
+                    if (window.innerWidth < 900) {
+                        $(".anim01, .anim02, .anim03").removeClass("active");
+                        $(".anim03").addClass("active");
+                        $(".bkgContainer__c1, .bkgContainer__c2, .bkgContainer__c3").removeClass("animation2");
+                        $(".bkgContainer__c1, .bkgContainer__c2, .bkgContainer__c3").removeClass("animation1");
+                        $(".bkgContainer__c1, .bkgContainer__c2, .bkgContainer__c3").addClass("animation3");
+                        $(".bkgContainer").addClass("animation3");
+                    } else if (window.innerWidth > 900) {
+                        $(".anim01, .anim02, .anim03").removeClass("active");
+                        $(".anim01").addClass("active");
+                        $(".bkgContainer").removeClass("animation3");
+                        $(".bkgContainer__c1, .bkgContainer__c2, .bkgContainer__c3").removeClass("animation3");
+                        $(".bkgContainer__c1, .bkgContainer__c2, .bkgContainer__c3").removeClass("animation2");
+                        $(".bkgContainer__c1, .bkgContainer__c2, .bkgContainer__c3").addClass("animation1");
+                    }
+                });
+                $(".anim01").click(function() {
+                    if($(this).hasClass("active")) {
+                        $(".bkgContainer__ctrl").removeClass("block");
+                    } else {
+                        $(".anim01, .anim02, .anim03").removeClass("active");
+                        $(".anim01").addClass("active");
+                        $(".bkgContainer__ctrl").removeClass("block");
+                        $(".bkgContainer").removeClass("animation3");
+                        $(".bkgContainer__c1, .bkgContainer__c2, .bkgContainer__c3").removeClass("animation3");
+                        $(".bkgContainer__c1, .bkgContainer__c2, .bkgContainer__c3").removeClass("animation2");
+                        $(".bkgContainer__c1, .bkgContainer__c2, .bkgContainer__c3").addClass("animation1");
+                    }
+                });
+                $(".anim02").click(function() {
+                    if($(this).hasClass("active")) {
+                        $(".bkgContainer__ctrl").removeClass("block");
+                    } else {
+                        $(".anim01, .anim02, .anim03").removeClass("active");
+                        $(".anim02").addClass("active");
+                        $(".bkgContainer__ctrl").removeClass("block");
+                        $(".bkgContainer").removeClass("animation3");
+                        $(".bkgContainer__c1, .bkgContainer__c2, .bkgContainer__c3").removeClass("animation3");
+                        $(".bkgContainer__c1, .bkgContainer__c2, .bkgContainer__c3").removeClass("animation1");
+                        $(".bkgContainer__c1, .bkgContainer__c2, .bkgContainer__c3").addClass("animation2");
+                    }
+                });
+                $(".anim03").click(function() {
+                    if($(this).hasClass("active")) {
+                        $(".bkgContainer__ctrl").removeClass("block");
+                    } else {
+                        $(".anim01, .anim02, .anim03").removeClass("active");
+                        $(".anim03").addClass("active");
+                        $(".bkgContainer__ctrl").removeClass("block");
+                        $(".bkgContainer__c1, .bkgContainer__c2, .bkgContainer__c3").removeClass("animation2");
+                        $(".bkgContainer__c1, .bkgContainer__c2, .bkgContainer__c3").removeClass("animation1");
+                        $(".bkgContainer__c1, .bkgContainer__c2, .bkgContainer__c3").addClass("animation3");
+                        $(".bkgContainer").addClass("animation3");
+                    }
+                });
+                $(document).mousemove(function(event) {
+                    windowWidth = $(window).width();
+                    windowHeight = $(window).height();
+                    
+                    mouseXpercentage = Math.round(event.pageX / windowWidth * 100);
+                    mouseYpercentage = Math.round(event.pageY / windowHeight * 100);
+                    
+                    $('.bkgContainer').css('background', 'radial-gradient(at ' + mouseXpercentage + '% ' + mouseYpercentage + '%, #ea3333 0%, #0f4c81 100%)');
+                });
+                $("#aniMenu").click(function() {
+                    $(".bkgContainer__ctrl").addClass("block");
+                });
+            });
+        </script>
+
+    </body>
+</html>

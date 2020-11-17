@@ -1,0 +1,235 @@
+//animazione 1
+@keyframes c1_01 {
+    0%      {background-color: $artRed;}
+    33%     {background-color: $artBlue;}
+    66%     {background-color: #fff;}
+    100%    {background-color: $artRed;}
+}
+@keyframes c2_01 {
+    0%      {background-color: $artBlue;}
+    33%     {background-color: #fff;}
+    66%     {background-color: $artRed;}
+    100%    {background-color: $artBlue;}
+}
+@keyframes c3_01 {
+    0%      {background-color: #fff;}
+    33%     {background-color: $artRed;}
+    66%     {background-color: $artBlue;}
+    100%    {background-color: #fff;}
+}
+
+//animazione 2
+@keyframes c1_02 {
+    0%      {background-color: $artRed;}
+    3%      {background-color: $artRed;}
+    30%     {background-color: $artBlue;}
+    36%     {background-color: $artBlue;}
+    63%     {background-color: #fff;}
+    69%     {background-color: #fff;}
+    97%     {background-color: $artRed;}
+    100%    {background-color: $artRed;}
+}
+@keyframes c2_02 {
+    0%      {background-color: $artBlue;}
+    3%      {background-color: $artBlue;}
+    30%     {background-color: #fff;}
+    36%     {background-color: #fff;}
+    63%     {background-color: $artRed;}
+    69%     {background-color: $artRed;}
+    97%     {background-color: $artBlue;}
+    100%    {background-color: $artBlue;}
+}
+@keyframes c3_02 {
+    0%      {background-color: #fff;}
+    3%      {background-color: #fff;}
+    30%     {background-color: $artRed;}
+    36%     {background-color: $artRed;}
+    63%     {background-color: $artBlue;}
+    69%     {background-color: $artBlue;}
+    97%     {background-color: #fff;}
+    100%    {background-color: #fff;}
+}
+
+.bkgContainer__ctrl {
+    z-index: 99;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+
+    p {
+        font-family: $IBMmono;
+        font-size: 1em;
+        line-height: normal;
+        color: #fff;
+        transition: .3s ease-out;
+        cursor: pointer;
+
+        &.active {
+            text-decoration: underline;
+        }
+    }
+    p:hover {
+        letter-spacing: .1em;
+    }
+}
+.bkgJumbo {
+    position: absolute;
+    z-index: -1;
+    overflow: hidden;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+
+    .bkgContainer {
+        width: 100%;
+        height: 100%;
+        filter: blur(250px);
+    
+        &__c1 {
+            position: absolute;
+            bottom: 30%;
+            left: calc(50% - 75vw);
+            width: 150vw;
+            height: 150vw;
+            border-radius: 100%;
+            background-color: $artRed;
+        }
+        &__c1.animation1 {
+            animation-name: c1_01;
+        }
+        &__c1.animation2 {
+            animation-name: c1_02;
+        }
+        &__c1.animation3 {
+            display: none;
+        }
+        &__c2 {
+            position: absolute;
+            top: 25%;
+            left: -75vw;
+            width: 150vw;
+            height: 150vw;
+            border-radius: 100%;
+            background-color: $artBlue;
+        }
+        &__c2.animation1 {
+            animation-name: c2_01;
+        }
+        &__c2.animation2 {
+            animation-name: c2_02;
+        }
+        &__c2.animation3 {
+            display: none;
+        }
+        &__c3 {
+            position: absolute;
+            top: 25%;
+            right: -75vw;
+            width: 150vw;
+            height: 150vw;
+            border-radius: 100%;
+            background-color: #fff;
+        }
+        &__c3.animation1 {
+            animation-name: c3_01;
+        }
+        &__c3.animation2 {
+            animation-name: c3_02;
+        }
+        &__c3.animation3 {
+            display: none;
+        }
+        .animation1 {
+            animation-duration: 20s;
+            animation-timing-function: linear;
+            animation-delay: 0s;
+            animation-iteration-count: infinite;
+            animation-direction: normal;
+            animation-fill-mode: none;
+        }
+        .animation2 {
+            animation-duration: 20s;
+            animation-timing-function: ease-in-out;
+            animation-delay: 0s;
+            animation-iteration-count: infinite;
+            animation-direction: normal;
+            animation-fill-mode: none;
+        }
+    }
+    .bkgContainer.animation3 {
+        filter: none;
+            
+        /*Fallback if gradeints don't work */
+        background: $artBlue;
+        /*Linear gradient... */
+        background: radial-gradient(at center, $artRed, $artBlue 10%);
+    }
+}
+
+@media only screen and (max-width: 900px) {
+
+    .bkgContainer__ctrl {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+        width: 100vw;
+        height: 100vh;
+        padding: 30% 0;
+        background-color: #fff;
+        z-index: 99;
+        position: absolute;
+        top: 0;
+        right: 0;
+        pointer-events: none;
+        opacity: 0;
+        transition: .4s ease-out;
+    
+        p {
+            text-align: center;
+            color: #000;
+        }
+        p:hover {
+            letter-spacing: normal;
+        }
+    }
+    .bkgContainer__ctrl.block {
+        opacity: 1;
+        pointer-events: auto;
+    }
+    .bkgJumbo {
+
+        .bkgContainer.animation3 {
+            background: radial-gradient(at center, $artRed, $artBlue 80%);
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    .bkgJumbo {
+
+        .bkgContainer {
+            filter: blur(100px);
+        }
+        .bkgContainer__c1 {
+            width: 100vh;
+            height: 100vh;
+            left: calc(50% - 50vh);
+        }
+        .bkgContainer__c2 {
+            width: 100vh;
+            height: 100vh;
+            top: 25%;
+            left: -50vh;
+        }
+        .bkgContainer__c3 {
+            width: 100vh;
+            height: 100vh;
+            top: 25%;
+            right: -50vh;
+        }
+    }
+
+}
